@@ -1,0 +1,33 @@
+<ion-content fullscreen>
+
+  <ion-item class="close-fake" lines="none" text-center>
+    <ion-button (click)="close()" fill="clear" color="primary">
+      <ion-icon name="close" slot="start"></ion-icon>
+    </ion-button>
+
+    <ion-button (click)="zoom(true)" fill="clear" color="primary">
+      <ion-icon name="add" slot="start"></ion-icon>
+    </ion-button>
+
+    <ion-button (click)="zoom(false)" fill="clear" color="primary">
+      <ion-icon name="remove" slot="start"></ion-icon>
+    </ion-button>
+
+  </ion-item>
+
+  <ion-slides [options]="sliderOpts" #slider>
+   
+      <ion-slide tappable  class="swipper-zoom-container">
+        <img src="{{img}}" tappable>  <!--Si pones en lugar de imagen "img"  y quitas el for se inicia en la foto correcta--> 
+      </ion-slide>    
+             
+  </ion-slides>
+
+ <!-- <ion-slides [options]="sliderOpts" *ngIf="papa_true">
+    <ion-slide *ngFor="let imagen of imagenes_papa ; index as i">
+      <img src="{{imagen}}" tappable (click)="openPreview(imagen,i)">
+    </ion-slide>
+  </ion-slides>-->
+
+  
+</ion-content>

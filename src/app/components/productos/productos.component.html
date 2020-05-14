@@ -1,0 +1,40 @@
+<ion-card color ="success">
+  <ion-card-title class="ion-text-center" color ="dark">{{alimentos[i].nombre}}</ion-card-title>
+  <ion-img [src] ="alimentos[i].imagen"></ion-img>
+  <ion-footer  class="ion-text-center">  
+    <ion-text>
+      Ubicacion: {{alimentos[i].ubicacion}}
+    </ion-text>
+  </ion-footer>
+</ion-card>
+<ion-tab-bar>
+  <ion-tab-button (click)="i=0">
+    <ion-label>Maiz</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button (click)="i=1">
+    <ion-label>Frijol</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button (click)="i=2">
+    <ion-label>Papa</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
+
+<ion-tab-bar>
+  <ion-tab-button (click)="i=3">
+    <ion-label>Sandía</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button (click)="i=4">
+    <ion-label>Melón</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button (click)="i=5">
+    <ion-label>Naranja</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
+
+
+
+

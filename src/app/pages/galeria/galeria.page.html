@@ -1,0 +1,92 @@
+<app-header></app-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <!--------------------------Imagenes Papa--------------------------------------------->
+    <ion-item>
+      <img slot="start" width="10%" left="90px" src="assets/iconos_productos/papa_icon.png">
+      <ion-label>Papa</ion-label>
+      <ion-toggle [(ngModel)]="papa_true" color="success"></ion-toggle>
+    </ion-item>
+
+    <ion-slides pager={true} [options]="sliderOpts" *ngIf="papa_true">
+      <ion-slide *ngFor="let imagen of imagenes_papa ; index as i">
+          <img src="{{imagen}}"  tappable (click)="openPreview(imagen,i)">
+          
+      </ion-slide>
+    </ion-slides>
+    
+
+    <!--------------------------Imagenes Sandia--------------------------------------------->
+    <ion-item>
+      <img slot="start" width="10%"  left="90px" src="assets/iconos_productos/sandia_icon.png" />
+      <ion-label>Sandia</ion-label>
+      <ion-toggle [(ngModel)]="sandia_true" color="success"></ion-toggle>
+    </ion-item>
+
+    <ion-slides pager={true} [options]="sliderOpts" *ngIf="sandia_true">
+      <ion-slide *ngFor="let imagen of imagenes_sandia ; index as i">
+        <img src="{{imagen}}" tappable (click)="openPreview(imagen,i)">
+      </ion-slide>
+    </ion-slides>
+
+    <!--------------------------Imagenes Melones--------------------------------------------->
+    <ion-item>
+      <img slot="start" width="10%" src="assets/iconos_productos/melon_icon.png" />
+      <ion-label>Melón</ion-label>
+      <ion-toggle [(ngModel)]="melon_true" color="success"></ion-toggle>
+    </ion-item>
+
+    <ion-slides pager = {true} [options]="sliderOpts" *ngIf="melon_true">
+      <ion-slide *ngFor="let imagen of imagenes_melon ; index as i">
+        <img class ="tamaño_imagenes" src="{{imagen}}" tappable (click)="openPreview(imagen,i)">
+      </ion-slide>
+    </ion-slides>
+
+    <!--------------------------Imagenes Naranja--------------------------------------------->
+   
+    <ion-item>
+      <img slot="start" width="10%" src="assets/iconos_productos/naranja_icon.png" />
+      <ion-label>Naranja</ion-label>
+      <ion-toggle [(ngModel)]="naranja_true" color="success"></ion-toggle>
+    </ion-item>
+
+    <ion-slides pager = {true} [options]="sliderOpts" *ngIf="naranja_true">
+      <ion-slide *ngFor="let imagen of imagenes_naranja ; index as i">
+        <img class ="tamaño_imagenes" src="{{imagen}}" tappable (click)="openPreview(imagen,i)">
+      </ion-slide>
+    </ion-slides>
+
+    <!--------------------------Imagenes Frijol--------------------------------------------->
+    
+    <ion-item>
+      <img slot="start" width="10%" src="assets/iconos_productos/frijoles_icon.png" />
+      <ion-label>Frijol</ion-label>
+      <ion-toggle [(ngModel)]="frijol_true" color="success"></ion-toggle>
+    </ion-item>
+
+    <ion-slides pager = {true} [options]="sliderOpts" *ngIf="frijol_true">
+      <ion-slide *ngFor="let imagen of imagenes_frijol ; index as i">
+        <img class ="tamaño_imagenes" src="{{imagen}}" tappable (click)="openPreview(imagen,i)">
+      </ion-slide>
+    </ion-slides>
+
+    <!--------------------------Imagenes Maiz--------------------------------------------->
+
+    <ion-item>
+      <img slot="start" width="10%" src="assets/iconos_productos/elote_icon.png" />
+      <ion-label>Maiz</ion-label>
+      <ion-toggle [(ngModel)]="maiz_true" color="success"></ion-toggle>
+    </ion-item>
+
+    <ion-slides pager = {true} [options]="sliderOpts" *ngIf="maiz_true">
+      <ion-slide *ngFor="let imagen of imagenes_maiz ; index as i">
+        <img class ="tamaño_imagenes" src="{{imagen}}" tappable (click)="openPreview(imagen,i)">
+      </ion-slide>
+    </ion-slides>
+
+  </ion-list>
+</ion-content>
+
+<app-footer></app-footer>

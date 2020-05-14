@@ -1,0 +1,7 @@
+{
+  "name": "Sembradio SJ",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
