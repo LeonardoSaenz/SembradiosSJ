@@ -27,7 +27,11 @@ const routes: Routes = [
   {
     path: 'imagen-modal',
     loadChildren: () => import('./pages/imagen-modal/imagen-modal.module').then( m => m.ImagenModalPageModule)
+  },  {
+    path: 'contacto',
+    loadChildren: () => import('./pages/contacto/contacto.module').then( m => m.ContactoPageModule)
   },
+
 ];
 
 @NgModule({
